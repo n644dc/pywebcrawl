@@ -5,11 +5,12 @@ import re
 
 class LinkParser(html.parser.HTMLParser):
 
-
+    
     def __init__(self):
+        #PROXY STUFF INOP!!!!!!!!!!! REMOVE IF YOU DONT NEED IT EXAMPLE ONLY
         html.parser.HTMLParser.__init__(self)
-        proxy_url = 'dfw-proxy.ext.ray.com:80'
-        s_proxy_url = 'dfw-proxy.ext.ray.com:80'
+        proxy_url = 'some.proxy.com:80'
+        s_proxy_url = 'some.proxy.com:80'
         proxy_support = urllib.request.ProxyHandler({'http': proxy_url})
         s_proxy_support = urllib.request.ProxyHandler({'https': s_proxy_url})
         opener = urllib.request.build_opener(proxy_support, urllib.request.HTTPHandler)
